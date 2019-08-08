@@ -1,0 +1,17 @@
+# This is your Editor pane.
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webapp2
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: webapp2
+    spec:
+      containers:
+      - name: webapp2
+        image: shubh10/helloworld:latest
+        ports:
+        - containerPort: 80
